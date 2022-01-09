@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .outerwrapper{
+                width: 500px;
+                border: 2px solid black;
+            }
+            .box{
+                width: 200px;
+                height: 50px;
+                padding: 10px;
+                background-color: skyblue;
+                border: 1px solid black;
+                margin: 10px;
+            }
+        </style>
+        <script>
+            let RESULT
+            function calculate(p)
+            {
+             var x=document.getElementById("no1").value;
+             var y=document.getElementById("no2").value;             
+             
+             //console.log(z);
+
+             //var RESULT = document.getElementById('RESULT');
+             //RESULT.value = z;
+             console.log(p);
+             if(p=='addition')
+             {
+                var z=parseInt(x)+parseInt(y);
+                var RESULT = document.getElementById('RESULT');
+                RESULT.value = z;
+             }
+             else if(p=='subs')
+             {
+                var z=parseInt(x)-parseInt(y);
+                var RESULT = document.getElementById('RESULT');
+                RESULT.value = z;
+             }
+             else if(p=='multiply')
+             {
+                var z=parseInt(x)*parseInt(y);
+                var RESULT = document.getElementById('RESULT');
+                RESULT.value = z;
+             }
+             else if(p=='modulus')
+             {
+                var z=parseInt(x)%parseInt(y);
+                var RESULT = document.getElementById('RESULT');
+                RESULT.value = z;
+             } 
+            }
+        </script>
+
+    </head>
+    <title>calculator</title>
+    <body>
+        <div class="outerwrapper">
+            <div class="box" id="box1">
+                <input type="number" id="no1">ENTER NO.1: 
+            </div>
+            <div class="box" id="box2">
+                <input type="number" id="no2">ENTER NO.2: 
+            </div>
+            <div class="box" id="box3">
+                <input type="button" onclick="calculate('addition')">ADD
+            </div>
+            <div class="box" id="box4">
+                <input type="button" onclick="calculate('subs')">SUBSTRACT
+            </div>
+            <div class="box" id="box5">
+                <input type="button" onclick="calculate('multiply')">MULTIPLY
+            </div>
+            <div class="box" id="box6">
+                <input type="button" onclick="calculate('molulus')">MODULUS
+            </div>
+            <div class="box" id="box7">
+                <input type="number" id="RESULT">RESULT
+            </div>
+        </div>
+    </body>
+</html>
